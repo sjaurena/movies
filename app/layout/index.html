@@ -1,0 +1,25 @@
+<!doctype html>
+<html ng-app="app">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Movies App</title>
+    <link rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="/media/css/styles.css" />
+    <script src="/bower_components/angular/angular.min.js"></script>
+    <script src="/bower_components/angular-route/angular-route.min.js"></script>
+    <script src="/app.js"></script>
+    <script src="/app.config.js"></script>
+    <script src="/modules/movies/movies.controller.js"></script>
+    <script src="/services/movies.service.js"></script>
+    <script src="/filters/totime.filter.js"></script>
+  </head>
+  <body>
+    <div class="container movies-app">
+      <div class="col-md-8 col-md-offset-2">
+        <div ng-view></div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,20 @@
+.movies-app {
+	margin-top: 20px;
+}
+
+.results {
+	margin: 20px 0;
+	overflow: hidden;
+	padding: 10px 8px;
+	border-top: 1px solid #ddd;
+	border-bottom: 1px solid #ddd; 
+}
+
+.list {}
+.list .thumb {
+	width: 100px;
+}
+
+.details {
+	width: 350px;
+}

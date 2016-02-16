@@ -1,0 +1,24 @@
+{
+  "name": "movies-app",
+  "version": "1.0.0",
+  "homepage": "https://github.com/sjaurena/movies",
+  "authors": [
+    "Sebastian Jaurena <seba.jaurena@gmail.com>"
+  ],
+  "description": "Movies APP",
+  "main": "app/app.js",
+  "keywords": [
+    "movies",
+    "app",
+    "listing"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "angular": "~1.5.0",
+    "angular-route": "~1.5.0",
+    "bootstrap": "~3.3.6",
+    "jquery": "~2.2.0",
+    "lodash": "~4.4.0",
+    "moment": "~2.11.2"
+  }
+}

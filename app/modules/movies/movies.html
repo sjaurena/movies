@@ -1,0 +1,57 @@
+<div class="movie-search">
+  <div class="form-group">
+    <div class="input-group">
+      <div class="input-group-addon">
+        <span class="glyphicon glyphicon-search"></span>
+      </div>
+      <input type="text" class="form-control" placeholder="Search..." ng-model="vm.search">
+    </div>
+  </div>
+</div>
+<div class="results">
+  <div class="pull-left">
+    1 - 5 of 16 results
+  </div>
+  <div class="pull-right">
+    Sort by
+    <div class="btn-group">
+      <button type="button" class="btn btn-default" ng-click="vm.orderBy = 'date'">Date</button>
+      <button type="button" class="btn btn-default" ng-click="vm.orderBy = 'title'">Name</button>
+    </div>
+    <div class="btn-group">
+      <button type="button" class="btn btn-default" ng-click="vm.sortDesc = false">Asc</button>
+      <button type="button" class="btn btn-default" ng-click="vm.sortDesc = true">Desc</button>
+    </div>
+  </div>
+</div>
+<table class="table list">
+  <tr class="movie" ng-repeat="movie in vm.movies.items | filter: vm.search | orderBy: vm.orderBy:vm.sortDesc">
+    <td class="thumb">
+      <img ng-src="{{movie.image}}" alt="..." class="img-thumbnail">
+    </td>
+    <td class="title">
+      <h5>{{movie.title}} <span class="label label-default">{{movie.rating}}</span></h5>
+      <button class="btn btn-primary btn-xs">Add to Watchlist</button>
+    </td>
+    <td class="details">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-md-6">
+            Release Date
+          </div>
+          <div class="col-md-6">
+            {{ movie.date | date:'MMMM d, yyyy' }}
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6">
+            Run Time
+          </div>
+          <div class="col-md-6">
+            {{ movie.run_time | toTime }}
+          </div>
+        </div>
+      </div>
+    </td>
+  </li>
+</div>
