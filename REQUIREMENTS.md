@@ -45,3 +45,7 @@ You will be judged based on both code quality and percentage of completion. Qual
 * As a user
   
   I want to be able to navigate to a movie detail page.
+
+## Wireframes
+![Movies](https://raw.githubusercontent.com/sjaurena/movies/master/requirements/listing.png)
+![Movie detail](https://raw.githubusercontent.com/sjaurena/movies/master/requirements/detail.png)
