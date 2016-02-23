@@ -8,7 +8,7 @@ function movies() {
       return {
         'items': [
           {
-            'image': 'https://cdn-thumbs.disneymoviesanywhere.com/thumbs/1/115/movie-thumb_1c02f92da5b7c_web.jpg',
+            'image': 'https://cdn-thumbs.disneymoviesanywhere.com/thumbs/1/115/movie-thumb_1c02f92da5b7c_web__027649.jpg',
             'title': 'Toy Story',
             'slug': 'toy-story',
             'date': '1995-11-22',
@@ -22,7 +22,7 @@ function movies() {
             'rating': 'G',
             'run_time': 5691
           }, {
-            'image': 'https://cdn-thumbs.disneymoviesanywhere.com/thumbs/1/115/movie-thumb_e01218fb3f3bd_web.jpg',
+            'image': 'https://cdn-thumbs.disneymoviesanywhere.com/thumbs/1/115/movie-thumb_e01218fb3f3bd_web__396403.jpg',
             'title': 'Toy Story 2',
             'slug': 'toy-story-2',
             'date': '1999-11-19',

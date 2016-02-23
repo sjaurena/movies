@@ -36,32 +36,15 @@
       <img ng-src="{{movie.image}}" alt="..." class="img-thumbnail">
     </td>
     <td class="title">
-      <h5>{{movie.title}} <span class="label label-default">{{movie.rating}}</span></h5>
+      <h5><a href="/#/movie/{{movie.slug}}">{{movie.title}}</a> <span class="label label-default">{{movie.rating}}</span></h5>
       <button class="btn btn-primary btn-xs">Add to Watchlist</button>
     </td>
     <td class="details">
-      <div class="container-fluid">
-        <div class="row">
-          <div class="col-md-6">
-            Release Date
-          </div>
-          <div class="col-md-6">
-            {{ movie.date | date:'MMMM d, yyyy' }}
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-md-6">
-            Run Time
-          </div>
-          <div class="col-md-6">
-            {{ movie.run_time | toTime }}
-          </div>
-        </div>
-      </div>
+      <movie-details movie="movie"></movie-details>
     </td>
   </tr>
 </table>
-<nav ng-show="vm.showPager()">
+<nav class="text-center" ng-show="vm.showPager()">
   <ul class="pagination">
     <li ng-repeat="page in vm.getPages()" ng-class="{active: vm.pager.current === page}">
       <span ng-click="vm.changePage(page)">{{ page + 1 }}</span>

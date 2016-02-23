@@ -1,0 +1,17 @@
+<div class="movie">
+  <div class="container-fluid">
+    <div class="col-md-3">
+      <img ng-src="{{vm.movie.image}}" class="img-thumbnail">
+    </div>
+    <div class="col-md-9">
+      <h4>{{vm.movie.title}} <span class="label label-default">{{vm.movie.rating}}</span></h4>
+      <movie-details movie="vm.movie"></movie-details>
+      <div class="buttons">
+        <button class="btn btn-primary">Add to Watchlist</button>
+        <button class="btn btn-primary">Preview</button>
+        <button class="btn btn-primary"><span class="glyphicon glyphicon-play"></span> Play</button>
+        <a href="/#/" class="btn btn-primary">Back</a>
+      </div>
+    </div>
+  </div>
+</div>
