@@ -10,6 +10,16 @@
 	border-bottom: 1px solid #ddd; 
 }
 
+.results .info {
+	padding: 7px 0;
+}
+
+.order {}
+.order .order-field {
+	display: inline;
+	width: auto;
+}
+
 .list {}
 .list .thumb {
 	width: 100px;
