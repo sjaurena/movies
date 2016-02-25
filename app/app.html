@@ -6,23 +6,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <base href="/">
     <title>Movies App</title>
-    <link rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="/vendor/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="/media/css/styles.css" />
-    <script src="/bower_components/lodash/lodash.js"></script>
-    <script src="/bower_components/angular/angular.min.js"></script>
-    <script src="/bower_components/angular-route/angular-route.min.js"></script>
+    <script src="/vendor/lodash/lodash.js"></script>
+    <script src="/vendor/jquery/dist/jquery.min.js"></script>
+    <script src="/vendor/angular/angular.min.js"></script>
+    <script src="/vendor/angular-ui-router/release/angular-ui-router.min.js"></script>
+    <script src="/vendor/ngstorage/ngStorage.min.js"></script>
     <script src="/app.js"></script>
     <script src="/app.config.js"></script>
-    <script src="/modules/movies/movies.controller.js"></script>
+    <script src="/layout/movies.controller.js"></script>
+    <script src="/modules/listing/listing.controller.js"></script>
     <script src="/modules/details/details.controller.js"></script>
     <script src="/services/movies.service.js"></script>
     <script src="/directives/movie-details.directive.js"></script>
+    <script src="/directives/watch-list.directive.js"></script>
     <script src="/filters/totime.filter.js"></script>
   </head>
   <body>
     <div class="container movies-app">
-      <div class="col-md-8 col-md-offset-2">
-        <div ng-view></div>
+      <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+          <div class="well" ui-view></div>
+        </div>
       </div>
     </div>
   </body>

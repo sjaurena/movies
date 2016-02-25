@@ -2,13 +2,13 @@ angular
 	.module('app')
 	.controller('DetailsController', DetailsController);
 
-DetailsController.$inject = ['movies', '$routeParams'];
+DetailsController.$inject = ['movies', '$stateParams'];
 
-function DetailsController(movies, $routeParams) {
+function DetailsController(movies, $stateParams) {
 
 	var vm = this;
 
 	vm.movie = _.find(movies.get().items, function(movie) {
-		return movie.slug === $routeParams.slug
+		return movie.slug === $stateParams.slug
 	});
 }

@@ -1,30 +1,74 @@
 .movies-app {
-	margin-top: 20px;
+  margin-top: 20px;
+}
+
+.watchlist {
+  list-style: none;
+  display: block;
+  margin: 0;
+  padding: 0;
+  padding-bottom: 8px;
+  margin-bottom: 18px;
+  clear: both;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  white-space: nowrap;
+}
+
+.watchlist::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+.watchlist::-webkit-scrollbar-track {
+  background: #ddd;
+  border-radius: 8px;
+}
+
+.watchlist::-webkit-scrollbar-thumb {
+  background: -webkit-linear-gradient(top, #999999 0%,#333333 100%);
+  border-radius: 8px;
+}
+
+.watchlist .movie {
+  display: inline-block;
+  padding: 0;
+  margin: 0;
+  width: 100px;
+  margin-right: 8px;
+}
+
+.watchlist .movie:last-child {
+  margin-right: 0;
 }
 
 .results {
-	margin: 20px 0;
-	overflow: hidden;
-	padding: 10px 8px;
-	border-top: 1px solid #ddd;
-	border-bottom: 1px solid #ddd; 
+  margin: 20px 0;
 }
 
 .results .info {
-	padding: 7px 0;
+  padding: 7px 0;
 }
 
 .order {}
 .order .order-field {
-	display: inline;
-	width: auto;
+  display: inline;
+  width: auto;
 }
 
 .list {}
-.list .thumb {
-	width: 100px;
+.list .movie {
+  padding: 20px 0;
+  border-bottom: 1px solid #ddd;
 }
+.list .thumb {}
+.list .title {}
+.list .title h5 {
+  margin-bottom: 15px;
+}
+.list .details {}
 
-.details {
-	width: 350px;
+.movie-details {}
+.movie-details h4 {
+  margin-bottom: 20px;
 }

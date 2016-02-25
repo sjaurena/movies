@@ -1,10 +1,10 @@
 angular
 	.module('app')
-	.controller('MoviesController', MoviesController);
+	.controller('ListingController', ListingController);
 
-MoviesController.$inject = ['movies'];
+ListingController.$inject = ['movies'];
 
-function MoviesController(movies) {
+function ListingController(movies) {
 
 	var vm = this;
 

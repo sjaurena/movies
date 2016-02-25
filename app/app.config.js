@@ -2,19 +2,24 @@ angular
   .module('app')
   .config(config);
 
-function config($routeProvider) {
-  $routeProvider
-    .when('/', {
-        templateUrl: 'modules/movies/movies.html',
-        controller: 'MoviesController',
-        controllerAs: 'vm'
+function config($stateProvider, $urlRouterProvider) {
+  $urlRouterProvider.otherwise('/');
+  $stateProvider
+    .state('movies', {
+      templateUrl: 'layout/movies.html',
+      controller: 'MoviesController',
+      controllerAs: 'vm'
     })
-    .when('/movie/:slug', {
-        templateUrl: 'modules/details/details.html',
-        controller: 'DetailsController',
-        controllerAs: 'vm'
+    .state('movies.listing', {
+      url: '/',
+      templateUrl: 'modules/listing/listing.html',
+      controller: 'ListingController',
+      controllerAs: 'vm'
     })
-    .otherwise({
-      redirectTo: '/'
+    .state('movies.details', {
+      url: '/movie/:slug',
+      templateUrl: 'modules/details/details.html',
+      controller: 'DetailsController',
+      controllerAs: 'vm'
     });
 }

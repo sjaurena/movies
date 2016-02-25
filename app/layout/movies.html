@@ -1,0 +1,8 @@
+<ul class="watchlist clearfix" ng-show="vm.watchList.length > 0">
+  <li class="movie" ng-repeat="movie in vm.watchList | orderBy:'title'">
+    <a ui-sref="movies.details({ slug: movie.slug })">
+      <img ng-src="{{ movie.image }}" alt="{{ movie.title }}" class="img-thumbnail">
+    </a>
+  </li>
+</ul>
+<div class="clearfix" ui-view></div>
