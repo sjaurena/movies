@@ -25,18 +25,22 @@ function watchList() {
     var vm = this;
 
     vm.isListed = isListed;
-    vm.add = add;
+    vm.toogle = toogle;
 
-    function isListed(movie) {
-      var exist = _.find($localStorage.watchList, function(m) {
-        return m.slug === movie.slug
+    function isListed() {
+      var exist = _.find($localStorage.watchList, function(movie) {
+        return movie.slug === vm.movie.slug
       });
       return angular.isDefined(exist);
     }
 
-    function add(movie) {
-      if (!vm.isListed(movie)) {
-        $localStorage.watchList.push(movie);
+    function toogle() {
+      if (vm.isListed()) {
+        _.remove($localStorage.watchList, function(movie) {
+          return movie.slug === vm.movie.slug
+        });
+      } else {
+        $localStorage.watchList.push(vm.movie);
       }
     }
   }
