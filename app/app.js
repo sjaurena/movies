@@ -1,2 +1,6 @@
 angular
-	.module('app', ['ui.router', 'ngStorage']);
+  .module('app', [
+    'ui.router',
+    'ngStorage',
+    'restangular'
+  ]);

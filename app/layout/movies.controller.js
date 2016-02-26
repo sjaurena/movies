@@ -8,6 +8,8 @@ function MoviesController(movies, $localStorage) {
 
   var vm = this;
 
+  vm.movies = movies.items;
+
   $localStorage.$default({
     watchList: []
   });

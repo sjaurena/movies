@@ -36,7 +36,7 @@
   </div>
 </div>
 <div class="container-fluid list">
-  <div class="row movie" ng-repeat="movie in vm.data = (vm.movies.items | filter:vm.search) | limitTo:vm.pager.size:vm.start() | orderBy:vm.order:vm.sortDesc">
+  <div class="row movie" ng-repeat="movie in vm.data = (vm.movies | filter:vm.search) | limitTo:vm.pager.size:vm.start() | orderBy:vm.order:vm.sortDesc">
     <div class="col-md-2 thumb">
       <img ng-src="{{movie.image}}" alt="..." class="img-thumbnail">
     </div>

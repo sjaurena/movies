@@ -20,6 +20,7 @@
     "lodash": "~4.4.0",
     "moment": "~2.11.2",
     "angular-ui-router": "~0.2.18",
-    "ngstorage": "~0.3.10"
+    "ngstorage": "~0.3.10",
+    "restangular": "~1.5.2"
   }
 }
