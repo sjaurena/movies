@@ -4,7 +4,10 @@
       <img ng-src="{{vm.movie.image}}" class="img-thumbnail">
     </div>
     <div class="col-md-9">
-      <h4>{{vm.movie.title}} <span class="label label-default">{{vm.movie.rating}}</span></h4>
+      <h4>
+        {{ vm.movie.title }} 
+        <span class="label label-default">{{ vm.movie.rating  | uppercase }}</span>
+      </h4>
       <movie-details movie="vm.movie"></movie-details>
       <div class="buttons">
         <watch-list movie="vm.movie" class="'btn btn-primary'"></watch-list>
